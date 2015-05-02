@@ -4,7 +4,6 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -22,13 +21,13 @@ import java.util.Iterator;
 public class MyMainGame extends ApplicationAdapter {
 
     //Explicit
-	private SpriteBatch batch;
+	private SpriteBatch batch;  // ส่วนของการวาด Texture
 	private Texture imgBackground, imvPig, imvCoins;
-    private OrthographicCamera objCamera;
+    private OrthographicCamera objCamera;   // กำหนดขนาดของจอเกมร์
     private Rectangle pigRectangle, coinsRectangle;
     private Vector3 objVector3;
     private Sound soundPig, soundWaterDrop, soundCoinsDrop;
-    private Array<Rectangle> objArray;
+    private Array<Rectangle> objArray;  // ของ com.badlogit.gdx.math
     private long lastDropTime;
     private Iterator<Rectangle> objIterator;
     private BitmapFont objBitmapFont, objBitmapFontFalse;
